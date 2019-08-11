@@ -19,15 +19,15 @@ public class OpenBrowser extends RegressionCommons
 			
 			}else if(browsername.equalsIgnoreCase("ie"))
 			{
-				System.setProperty("webdriver.ie.driver",iepath);
+				/*System.setProperty("webdriver.ie.driver",iepath);
 				 driver = new InternetExplorerDriver();
-			
+			*/
 				
 			}else if(browsername.equalsIgnoreCase("firefox"))
 			{
-				System.setProperty("webdriver.gecko.driver",firefoxpath);
+				/*System.setProperty("webdriver.gecko.driver",firefoxpath);
 				 driver = new FirefoxDriver();
-			
+			*/
 				
 			}else
 			{

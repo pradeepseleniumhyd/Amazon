@@ -3,6 +3,7 @@ package in.amazon.selenium.testcases;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -15,7 +16,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import in.amazon.selenium.commons.OpenBrowser;
 import in.amazon.selenium.commons.RegressionCommons;
 
-public class TC001 extends RegressionCommons
+public class TC002 extends RegressionCommons
 {
 	
 	OpenBrowser ob = new OpenBrowser();
@@ -29,7 +30,7 @@ public class TC001 extends RegressionCommons
 		extent = new ExtentReports();
 		extent.attachReporter(report);
 		report.setAppendExisting(false);
-		
+
 		}catch(Exception e)
 		{
 			System.out.println("Report method issue : " + e.getMessage() );
@@ -40,7 +41,7 @@ public class TC001 extends RegressionCommons
 	@BeforeMethod
 	public void config(String browser) throws Exception
 	{
-		test = extent.createTest("TC001 - Amazon Home Page");
+		test = extent.createTest("TC002 - Amazon");
 		test.assignAuthor("Indu");
 		test.assignCategory(browser);
 		prop=configLoad(configPath);
@@ -53,11 +54,15 @@ public class TC001 extends RegressionCommons
 	
 	
 	@Test
-	public void TC001() throws Exception
+	public void TC002() throws Exception
 	{
 		try
 		{
-		validateTitle(driver,test, prop.getProperty("HomePageTitle"));
+			validateAttribute(driver, test, "(//a[contains(@class,'logo')])[1]", "aria-label", "Amazon");
+				
+				
+				
+				
 		}catch(Exception e)
 		{
 			System.out.println(e.getMessage());
