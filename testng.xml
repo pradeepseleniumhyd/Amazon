@@ -4,8 +4,8 @@
   <test name="Chrome SIT Test" >
   	<parameter name="browser" value="chrome"/>
   	<classes>
-  		<class name="in.amazon.selenium.testcases.TC001"/>
-  		<class name="in.amazon.selenium.testcases.TC002"/>
+  		<class name="in.amazon.selenium.testcases.TC001"/> 
+  		<class name="in.amazon.selenium.testcases.TC003"/>
   	</classes>
   </test> <!-- Test -->
   

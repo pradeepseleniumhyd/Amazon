@@ -10,8 +10,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.relevantcodes.extentreports.ExtentReports;
 
 import in.amazon.selenium.commons.OpenBrowser;
 import in.amazon.selenium.commons.RegressionCommons;
@@ -26,10 +25,7 @@ public class TC002 extends RegressionCommons
 	{
 		try
 		{
-		report = new ExtentHtmlReporter(reportPath);
-		extent = new ExtentReports();
-		extent.attachReporter(report);
-		report.setAppendExisting(false);
+			extent = new ExtentReports(reportPath,true);
 
 		}catch(Exception e)
 		{
@@ -41,7 +37,7 @@ public class TC002 extends RegressionCommons
 	@BeforeMethod
 	public void config(String browser) throws Exception
 	{
-		test = extent.createTest("TC002 - Amazon");
+		test = extent.startTest("TC002 - Amazon");
 		test.assignAuthor("Indu");
 		test.assignCategory(browser);
 		prop=configLoad(configPath);
@@ -59,9 +55,10 @@ public class TC002 extends RegressionCommons
 		try
 		{
 			validateAttribute(driver, test, "(//a[contains(@class,'logo')])[1]", "aria-label", "Amazon");
-				
-				
-				
+			click(driver, test, "//a[text()='Your Amazon.in']", "Your Amazon.in");	
+			validateText(driver, test, "//label[contains(text(),'Email')]", "Email or mobile phone number");
+			validateText(driver, test, "//h1[contains(text(),'Login')]", "LoginTest");
+			validateText(driver, test, "//span[contains(text(),'Amazon')]", "© 1996-2019, Amazon.com, Inc. or its affiliates");
 				
 		}catch(Exception e)
 		{
@@ -76,6 +73,7 @@ public class TC002 extends RegressionCommons
 		try
 		{
 			driver.close();
+			extent.endTest(test);
 			extent.flush();
 		}catch(Exception e)
 		{

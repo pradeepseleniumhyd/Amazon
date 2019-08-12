@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
-    <line>
-      <![CDATA[www.amazon.in is not matched]]>
-    </line>
   </reporter-output>
-  <suite name="Amazon Project" duration-ms="45600" started-at="2019-08-11T01:29:23Z" finished-at="2019-08-11T01:30:08Z">
+  <suite name="Amazon Project" duration-ms="927" started-at="2019-08-12T01:31:05Z" finished-at="2019-08-12T01:31:06Z">
     <groups>
     </groups>
-    <test name="Chrome SIT Test" duration-ms="45600" started-at="2019-08-11T01:29:23Z" finished-at="2019-08-11T01:30:08Z">
-      <class name="in.amazon.selenium.testcases.TC002">
-        <test-method status="PASS" signature="config(java.lang.String)[pri:0, instance:in.amazon.selenium.testcases.TC002@be92ad]" name="config" is-config="true" duration-ms="16314" started-at="2019-08-11T06:59:52Z" finished-at="2019-08-11T07:00:08Z">
+    <test name="Chrome SIT Test" duration-ms="927" started-at="2019-08-12T01:31:05Z" finished-at="2019-08-12T01:31:06Z">
+      <class name="in.amazon.selenium.testcases.TC003">
+        <test-method status="PASS" signature="TC003(java.lang.String)[pri:0, instance:in.amazon.selenium.testcases.TC003@5cb137]" name="TC003" duration-ms="38" started-at="2019-08-12T07:01:06Z" finished-at="2019-08-12T07:01:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC003 -->
+        <test-method status="PASS" signature="config(java.lang.String)[pri:0, instance:in.amazon.selenium.testcases.TC003@5cb137]" name="config" is-config="true" duration-ms="0" started-at="2019-08-12T07:01:06Z" finished-at="2019-08-12T07:01:06Z">
           <params>
             <param index="0">
               <value>
@@ -21,25 +29,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="PASS" signature="TC002()[pri:0, instance:in.amazon.selenium.testcases.TC002@be92ad]" name="TC002" duration-ms="49" started-at="2019-08-11T07:00:08Z" finished-at="2019-08-11T07:00:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC002 -->
-        <test-method status="PASS" signature="configend()[pri:0, instance:in.amazon.selenium.testcases.TC002@be92ad]" name="configend" is-config="true" duration-ms="112" started-at="2019-08-11T07:00:08Z" finished-at="2019-08-11T07:00:08Z">
+        <test-method status="PASS" signature="configend()[pri:0, instance:in.amazon.selenium.testcases.TC003@5cb137]" name="configend" is-config="true" duration-ms="38" started-at="2019-08-12T07:01:06Z" finished-at="2019-08-12T07:01:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configend -->
-      </class> <!-- in.amazon.selenium.testcases.TC002 -->
+      </class> <!-- in.amazon.selenium.testcases.TC003 -->
       <class name="in.amazon.selenium.testcases.TC001">
-        <test-method status="PASS" signature="Report()[pri:0, instance:in.amazon.selenium.testcases.TC001@1057a39]" name="Report" is-config="true" duration-ms="918" started-at="2019-08-11T06:59:22Z" finished-at="2019-08-11T06:59:23Z">
+        <test-method status="PASS" signature="Report()[pri:0, instance:in.amazon.selenium.testcases.TC001@4f787b]" name="Report" is-config="true" duration-ms="155" started-at="2019-08-12T07:01:05Z" finished-at="2019-08-12T07:01:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Report -->
-        <test-method status="PASS" signature="Report()[pri:0, instance:in.amazon.selenium.testcases.TC002@be92ad]" name="Report" is-config="true" duration-ms="2" started-at="2019-08-11T06:59:23Z" finished-at="2019-08-11T06:59:23Z">
+        <test-method status="PASS" signature="Report()[pri:0, instance:in.amazon.selenium.testcases.TC003@5cb137]" name="Report" is-config="true" duration-ms="2" started-at="2019-08-12T07:01:05Z" finished-at="2019-08-12T07:01:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Report -->
-        <test-method status="PASS" signature="config(java.lang.String)[pri:0, instance:in.amazon.selenium.testcases.TC001@1057a39]" name="config" is-config="true" duration-ms="28583" started-at="2019-08-11T06:59:23Z" finished-at="2019-08-11T06:59:52Z">
+        <test-method status="PASS" signature="config(java.lang.String)[pri:0, instance:in.amazon.selenium.testcases.TC001@4f787b]" name="config" is-config="true" duration-ms="3" started-at="2019-08-12T07:01:05Z" finished-at="2019-08-12T07:01:05Z">
           <params>
             <param index="0">
               <value>
@@ -50,14 +54,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="PASS" signature="TC001()[pri:0, instance:in.amazon.selenium.testcases.TC001@1057a39]" name="TC001" duration-ms="21" started-at="2019-08-11T06:59:52Z" finished-at="2019-08-11T06:59:52Z">
+        <test-method status="PASS" signature="TC001(java.lang.String)[pri:0, instance:in.amazon.selenium.testcases.TC001@4f787b]" name="TC001" duration-ms="539" started-at="2019-08-12T07:01:05Z" finished-at="2019-08-12T07:01:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
-            <line>
-              <![CDATA[www.amazon.in is not matched]]>
-            </line>
           </reporter-output>
         </test-method> <!-- TC001 -->
-        <test-method status="PASS" signature="configend()[pri:0, instance:in.amazon.selenium.testcases.TC001@1057a39]" name="configend" is-config="true" duration-ms="488" started-at="2019-08-11T06:59:52Z" finished-at="2019-08-11T06:59:52Z">
+        <test-method status="PASS" signature="configend()[pri:0, instance:in.amazon.selenium.testcases.TC001@4f787b]" name="configend" is-config="true" duration-ms="284" started-at="2019-08-12T07:01:06Z" finished-at="2019-08-12T07:01:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configend -->

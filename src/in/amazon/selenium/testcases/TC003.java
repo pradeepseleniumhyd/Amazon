@@ -18,7 +18,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import in.amazon.selenium.commons.OpenBrowser;
 import in.amazon.selenium.commons.RegressionCommons;
 
-public class TC001 extends RegressionCommons
+public class TC003 extends RegressionCommons
 {
 	
 	OpenBrowser ob = new OpenBrowser();
@@ -40,7 +40,7 @@ public class TC001 extends RegressionCommons
 	@BeforeMethod
 	public void config(String browser) throws Exception
 	{
-		test = extent.startTest("TC001 - Amazon Home Page");
+		test = extent.startTest("TC003 - Amazon Home Page");
 		test.assignAuthor("Indu");
 		test.assignCategory(browser);
 		prop=configLoad(configPath);
@@ -52,7 +52,7 @@ public class TC001 extends RegressionCommons
 	
 	@Parameters("browser")
 	@Test
-	public void TC001(String browser) throws Exception
+	public void TC003(String browser) throws Exception
 	{
 		try
 		{
@@ -61,7 +61,7 @@ public class TC001 extends RegressionCommons
 			XSSFSheet sheet = workbook.getSheet("TestData");
 			for(int i = 1; i<= sheet.getLastRowNum() ; i++)
 			{
-				if(sheet.getRow(i).getCell(0).getStringCellValue().equalsIgnoreCase("TC001") && sheet.getRow(i).getCell(3).getStringCellValue().equalsIgnoreCase("Yes"))
+				if(sheet.getRow(i).getCell(0).getStringCellValue().equalsIgnoreCase("TC003") && sheet.getRow(i).getCell(3).getStringCellValue().equalsIgnoreCase("Yes"))
 				{
 
 					driver = ob.browserOpen(driver, browser);
@@ -70,10 +70,11 @@ public class TC001 extends RegressionCommons
 					driver.close();
 				}
 				
-				if(sheet.getRow(i).getCell(0).getStringCellValue().equalsIgnoreCase("TC001") && sheet.getRow(i).getCell(3).getStringCellValue().equalsIgnoreCase("No"))
+				if(sheet.getRow(i).getCell(0).getStringCellValue().equalsIgnoreCase("TC003") && sheet.getRow(i).getCell(3).getStringCellValue().equalsIgnoreCase("No"))
 				{
-					test.log(LogStatus.SKIP, "TC001 Run mode is No");
-					throw new SkipException("TC001 Run mode is No");
+					test.log(LogStatus.SKIP, "TC003 Run mode is No");
+
+					throw new SkipException("TC003 Run mode is No");
 				}
 			}
 			
@@ -93,6 +94,7 @@ public class TC001 extends RegressionCommons
 		{
 			
 			extent.endTest(test);
+
 			extent.flush();
 		}catch(Exception e)
 		{
